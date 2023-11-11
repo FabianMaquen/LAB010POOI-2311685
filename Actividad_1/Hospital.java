@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -10,7 +11,7 @@ public class Hospital {
     private ArrayList<Paciente> listaPacientes = new ArrayList<>();
     private ArrayList<Medico> listaMedicos = new ArrayList<>();
 
-    //Medicos
+    //LISTA DE MEDICOS
     Medico medico1 = new Medico(rd.nextInt(10000), generarNombreAleatorio(),generarEspecialidadAleatoria());
     Medico medico2 = new Medico(rd.nextInt(10000), generarNombreAleatorio(),generarEspecialidadAleatoria());
     Medico medico3 = new Medico(rd.nextInt(10000), generarNombreAleatorio(),generarEspecialidadAleatoria());
@@ -22,26 +23,26 @@ public class Hospital {
     Medico medico9 = new Medico(rd.nextInt(10000), generarNombreAleatorio(),generarEspecialidadAleatoria());
     Medico medico10 = new Medico(rd.nextInt(10000), generarNombreAleatorio(),generarEspecialidadAleatoria());
 
-    //Pacientes
-    Paciente paciente1 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301) + 1, rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
-    Paciente paciente2 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301) + 1, rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
-    Paciente paciente3 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301) + 1, rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
-    Paciente paciente4 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301) + 1, rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
-    Paciente paciente5 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301) + 1, rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
-    Paciente paciente6 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301) + 1, rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
-    Paciente paciente7 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301) + 1, rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
-    Paciente paciente8 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301) + 1, rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
-    Paciente paciente9 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301) + 1, rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
-    Paciente paciente10 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301) + 1, rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
-    Paciente paciente11 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301) + 1, rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
-    Paciente paciente12 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301) + 1, rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
-    Paciente paciente13 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301) + 1, rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
-    Paciente paciente14 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301) + 1, rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
-    Paciente paciente15 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301) + 1, rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
+    //LISTA DE PACIENTES
+    Paciente paciente1 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301), rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
+    Paciente paciente2 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301), rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
+    Paciente paciente3 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301), rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
+    Paciente paciente4 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301), rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
+    Paciente paciente5 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301), rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
+    Paciente paciente6 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301), rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
+    Paciente paciente7 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301), rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
+    Paciente paciente8 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301), rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
+    Paciente paciente9 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301), rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
+    Paciente paciente10 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301), rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
+    Paciente paciente11 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301), rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
+    Paciente paciente12 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301), rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
+    Paciente paciente13 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301), rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
+    Paciente paciente14 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301), rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
+    Paciente paciente15 = new Paciente(rd.nextInt(90000000) + 10000000, generarNombreAleatorio(), generarCiudadAleatoria() + " - Calle " + (rd.nextInt(20)+1) +", Mz " + generarMzAleatoria() +" Lt. " + rd.nextInt(301), rd.nextDouble(111) + 10, rd.nextDouble(5) + 35);
     
     
     public void iniciarDatos(){
-        //Medicos
+        //MEDICOS
         listaMedicos.add(medico1);
         listaMedicos.add(medico2);
         listaMedicos.add(medico3);
@@ -53,7 +54,7 @@ public class Hospital {
         listaMedicos.add(medico9);
         listaMedicos.add(medico10);
 
-        //Pacientes
+        //PACIENTES
         listaPacientes.add(paciente1);
         listaPacientes.add(paciente2);
         listaPacientes.add(paciente3);
@@ -70,7 +71,7 @@ public class Hospital {
         listaPacientes.add(paciente14);
         listaPacientes.add(paciente15);
 
-        // AsignarMedicos
+        // ASIGNAR MEDICOS A LOS PACIENTES ACTUALES
         for (Paciente paciente : listaPacientes) {
             Medico medicoAleatorio = listaMedicos.get(rd.nextInt(listaMedicos.size()));
             paciente.setMedicoAsignado(medicoAleatorio);
@@ -111,17 +112,21 @@ public class Hospital {
                 case 2:
                     imprimirListaPacientes();
                     eliminarPaciente();
+                    System.out.println("¡Lista de pacientes actualizada con exito!");
                     imprimirListaPacientes();
                     break;
                 case 3:
                     imprimirListaPacientes();
                     modificarPaciente();
+                    System.out.println("¡Lista de pacientes actualizada con exito!");
                     imprimirListaPacientes();
                     break;
                 case 4:
+                    imprimirListaPacientes();
                     mostrarPesoMasRepetido();
                     break;
                 case 5:
+                    imprimirListaPacientes();
                     mostrarCantidadPacientesPesoRepetido();
                     break;
                 case 6:
@@ -140,6 +145,7 @@ public class Hospital {
                     mostrarMedicoDePaciente();
                     break;
                 case 10:
+                    imprimirListaMedicos();
                     buscarMedicosEspecialidad();
                     break;
                 case 0:
@@ -152,13 +158,14 @@ public class Hospital {
         } while (opcion != 0);
     }
     
+    //METODOS DE GENERACIONES ALEATORIAS
     public String generarNombreAleatorio() {
         String[] nombres = {"Carlos", "Juan", "Franco", "Ana", "Maria", "Ariana", "Miguel", "Omar", "Carmen", "Raul", "Javier", "Sonia", "Olga", "Teresa", "Guillermo", "Marina", "Lesly", "Vanessa", "Marco"};
         return nombres[rd.nextInt(nombres.length)];
     }
 
     public String generarEspecialidadAleatoria() {
-        String[] especialidades = {"Dermatologia", "Cardiologia", "Oftalmologia", "Neurologia", "Cirugia", "Otorrinolaringologia", "Psiquiatría", "Urología", "Hematología", "Traumatología", "Pediatría", "Ginecología", "Anestesiología"};
+        String[] especialidades = {"Dermatologia", "Cardiologia", "Oftalmologia", "Neurologia", "Cirugia", "Otorrinolaringologia", "Psiquiatria", "Urologia", "Hematologia", "Traumatologia", "Pediatria", "Ginecologia", "Anestesiologia"};
         return especialidades[rd.nextInt(especialidades.length)];
     }
 
@@ -172,16 +179,23 @@ public class Hospital {
         return especialidades[rd.nextInt(especialidades.length)];
     }
 
+    //METODO PARA ASIGNAR MEDICO A UN PACIENTE
     public void asignarMedicoAPer(Paciente paciente){
-        if (listaMedicos.isEmpty()) {
-            System.out.println("No hay médicos disponibles para asignación.");
-            return;
-        }
-    
         Medico medicoAleatorio = listaMedicos.get(rd.nextInt(listaMedicos.size()));
         paciente.setMedicoAsignado(medicoAleatorio);
     
-        System.out.println("Se le ha asignado un médico al paciente " + paciente.getNombre() + ".");
+        System.out.println("Se le ha asignado el Médic@ " + paciente.getMedicoAsignado().getNombre() + " al paciente " + paciente.getNombre() + ".");
+    }
+
+    // METODOS DE IMPRESION DE LISTAS
+    public void imprimirListaMedicos() {
+        System.out.println("-------------------------------------------------------------------------------");
+        System.out.printf("%-20s%-25s%-25s%n", "N° COLEGIATURA  ", "     NOMBRE-MEDICO  ", "          ESPECIALIDAD      ");
+        System.out.println("-------------------------------------------------------------------------------");
+        for (Medico medico : listaMedicos) {
+            System.out.printf("%-25d%-30s%-30s%n", medico.getnCogeliatura(), medico.getNombre(), medico.getEspecialidad());
+        }
+        System.out.println("-------------------------------------------------------------------------------");
     }
 
     public void imprimirListaPacientes(){
@@ -196,26 +210,99 @@ public class Hospital {
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------");
     }
 
+    // METODOS DE VERIFICACIONES
+    private double obtenerDniValido() {
+        double dni;
+        while (true) {
+            try {
+                dni = sc.nextDouble();
+                if (dni >= 10000000 && dni <= 99999999) {
+                    break;
+                } else {
+                    System.out.print("Ingrese un DNI válido (8 dígitos): ");
+                }
+            } catch (Exception e) {
+                System.out.print("Ingrese un DNI válido (8 dígitos): ");
+                sc.nextLine();
+            }
+        }
+        return dni;
+    }
+
+    private String obtenerNombreValido() {
+        String nom = "";
+        boolean nombreValido = false;
+
+        while (!nombreValido) {
+            try {
+                nom = sc.next();
+                nombreValido = true; 
+            } catch (Exception e) {
+                System.out.print("Ingrese un nombre válido: ");
+                sc.nextLine();
+            }
+        }
+
+        return nom;
+    }
+    
+    private double obtenerPesoValido() {
+        double peso;
+        while (true) {
+            try {
+                peso = sc.nextDouble();
+                if (peso > 0 && peso < 150) {
+                    break;
+                } else {
+                    System.out.print("Ingrese un peso válido: ");
+                }
+            } catch (Exception e) {
+                System.out.print("Ingrese un peso válido: ");
+                sc.nextLine();
+            }
+        }
+        return peso;
+    }
+    
+    private double obtenerTemperaturaValida() {
+        double temp;
+        while (true) {
+            try {
+                temp = sc.nextDouble();
+                if (temp > 25 && temp < 45) {
+                    break;
+                } else {
+                    System.out.print("Ingrese una temperatura válida: ");
+                }
+            } catch (Exception e) {
+                System.out.print("Ingrese una temperatura válida: ");
+                sc.nextLine();
+            }
+        }
+        return temp;
+    }
+
+    // METODOS DE LA TABLA 1-10
     public void registrarPaciente() {
         System.out.println("\n**** Ingrese los datos del paciente ****");
         System.out.print("DNI: ");
-        double dni = sc.nextDouble();
+        double dni = obtenerDniValido();
 
         System.out.print("Nombre: ");
-        String nom = sc.next();
-        sc.nextLine();
+        String nom = obtenerNombreValido();
 
-        System.out.print("Dirección(Terminar con ' [espacio]f'): ");
+        System.out.print("Dirección (Terminar con ' [espacio]f'): ");
+        sc.nextLine();  
         String direccionCompleta = sc.nextLine();
         int index = direccionCompleta.lastIndexOf(" ");
         String numeroDireccion = direccionCompleta.substring(index + 1);
         String dc = direccionCompleta.substring(0, index);
 
         System.out.print("Peso: ");
-        double peso = sc.nextDouble();
+        double peso = obtenerPesoValido();
 
         System.out.print("Temperatura: ");
-        double temp = sc.nextDouble();
+        double temp = obtenerTemperaturaValida();
         System.out.println();
         
         Paciente nuevoPaciente = new Paciente(dni, nom, dc, peso, temp);
@@ -227,27 +314,31 @@ public class Hospital {
     }
 
     public void eliminarPaciente() {
-        System.out.print("Ingrese la posición del paciente que desea eliminar: ");
+        System.out.print("\nIngrese la posición del paciente que desea eliminar: ");
         int pos = sc.nextInt();
 
         if (pos >= 0 && pos < listaPacientes.size()) {
             listaPacientes.remove(pos);
-            System.out.println("Paciente eliminado exitosamente.");
+            System.out.println("\nPaciente eliminado exitosamente.");
         } else {
-            System.out.println("Posición no válida. No se eliminó ningún paciente.");
+            System.out.println("\nPosición no válida. No se eliminó ningún paciente.");
         }
     }
 
     public void modificarPaciente() {
-        System.out.print("Ingrese la posición del paciente que desea modificar: ");
+        System.out.print("\nIngrese la posición del paciente que desea modificar: ");
         int pos = sc.nextInt();
 
         if (pos >= 0 && pos < listaPacientes.size()) {
             Paciente pacienteModificado = listaPacientes.get(pos);
 
             System.out.println("Ingrese los datos modificados del paciente:");
+            System.out.print("DNI: ");
+            double dni = obtenerDniValido();
+            pacienteModificado.setDni(dni);
+
             System.out.print("Nombre: ");
-            String nom = sc.next();
+            String nom = obtenerNombreValido();
             pacienteModificado.setNombre(nom);
 
             System.out.print("Dirección (Terminar con ' [espacio]f'): ");
@@ -259,25 +350,59 @@ public class Hospital {
             pacienteModificado.setDireccion(dc);
 
             System.out.print("Peso: ");
-            double peso = sc.nextDouble();
+            double peso = obtenerPesoValido();
             pacienteModificado.setPeso(peso);
 
             System.out.print("Temperatura: ");
-            double temp = sc.nextDouble();
+            double temp = obtenerTemperaturaValida();
             pacienteModificado.setTemperatura(temp);
 
-            System.out.println("El paciente ha sido modificado exitosamente.");
+            System.out.println("\nEl paciente ha sido modificado exitosamente.");
         } else {
-            System.out.println("Posición no válida. No se modificó ningún paciente.");
+            System.out.println("\nPosición no válida. No se modificó ningún paciente.");
         }
     }
 
     public void mostrarPesoMasRepetido() {
-        // Mostrar el peso que más se repite en la lista.
+        List<Double> pesos = new ArrayList<>();
+
+        for (Paciente paciente : listaPacientes) {
+            pesos.add(paciente.getPeso());
+        }
+
+        double pesoMasRepetido = 0.0;
+        int iPersonasPeso = 0;
+
+        for (Double peso : pesos) {
+            int frecuencia = Collections.frequency(pesos, peso);
+            if (frecuencia > iPersonasPeso) {
+                iPersonasPeso = frecuencia;
+                pesoMasRepetido = peso;
+            }
+        }
+
+        System.out.printf("\nEl peso más repetido es: %.1f kg", pesoMasRepetido);
+        System.out.println();
     }
 
     public void mostrarCantidadPacientesPesoRepetido() {
-        // Mostrar la cantidad de pacientes que tienen el peso que más se repite
+        List<Double> pesos = new ArrayList<>();
+
+        for (Paciente paciente : listaPacientes) {
+            pesos.add(paciente.getPeso());
+        }
+
+        int iPersonasPeso = 0;
+
+        for (Double peso : pesos) {
+            int frecuencia = Collections.frequency(pesos, peso);
+            if (frecuencia > iPersonasPeso) {
+                iPersonasPeso = frecuencia;
+            }
+        }
+
+        System.out.println("\nLa cantidad de pacientes con el peso más repetido es: " + iPersonasPeso + " paciente(s).");
+        System.out.println();
     }
 
     public void mostrarPesoMayorYMenor() {
@@ -362,7 +487,7 @@ public class Hospital {
     }
 
     public void buscarMedicosEspecialidad() {
-        System.out.println("Hospital Maria Magadalena - Especialidades:\n> Dermatologia\n> Cardiologia\n> Oftalmologia\n> Neurologia\n> Cirugia");
+        System.out.println("\nHospital Maria Magadalena - Especialidades:\n> Dermatologia\n> Cardiologia\n> Oftalmologia\n> Neurologia\n> Cirugia\n> Otorrinolaringologia\n> Psiquiatria\n> Urologia\n> Hematologia\n> Traumatologia\n> Pediatria\n> Ginecologia\n> Anestesiologia");
         System.out.print("Ingrese la especialidad que desea buscar: ");
         String especialidad = sc.next();
 
@@ -370,13 +495,13 @@ public class Hospital {
 
         for (Medico medico : listaMedicos) {
             if (medico.getEspecialidad().equalsIgnoreCase(especialidad)) {
-                System.out.println("Médico de " + especialidad + ": " + medico.getNombre());
+                System.out.println("\nMédico de " + especialidad + ": " + medico.getNombre());
                 encontrado = true;
             }
         }
 
         if (!encontrado) {
-            System.out.println("\nNo se encontraron médicos con esa especialidad.");
+            System.out.println("\nNo contamos con médicos de " + especialidad +" en este momento.");
         }
     }
 
